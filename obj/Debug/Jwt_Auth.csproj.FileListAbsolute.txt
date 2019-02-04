@@ -324,3 +324,6 @@ C:\Users\HOME\source\repos\Jwt_Auth\Jwt_Auth\obj\Debug\Jwt_Auth.csproj.CopyCompl
 C:\Users\HOME\source\repos\Jwt_Auth\Jwt_Auth\obj\Debug\Jwt_Auth.dll
 C:\Users\HOME\source\repos\Jwt_Auth\Jwt_Auth\obj\Debug\Jwt_Auth.pdb
 C:\Users\HOME\source\repos\Jwt_Auth\Jwt_Auth\obj\Debug\Jwt_Auth.csprojAssemblyReference.cache
+C:\Users\HOME\source\repos\Jwt_Auth\Jwt_Auth\bin\System.Web.Cors.dll
+C:\Users\HOME\source\repos\Jwt_Auth\Jwt_Auth\bin\System.Web.Http.Cors.dll
+C:\Users\HOME\source\repos\Jwt_Auth\Jwt_Auth\bin\System.Web.Http.Cors.xml

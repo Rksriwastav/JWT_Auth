@@ -1,26 +1,27 @@
-﻿using System.Net;
+﻿using System.Configuration;
+using System.Data.SqlClient;
+using System.Net;
+using System.Threading;
 using System.Web.Http;
 using Jwt_Auth.Models;
 
 namespace Jwt_Auth.Controllers
 {
+
     public class AuthenticationController : ApiController
     {
-        [AllowAnonymous]
-        public string Get(UserDetail user)
+        [CustomAuthorize]
+        public string Get()
         {
-            if (CheckUser(user.username, user.password))
+            if (Thread.CurrentPrincipal.Identity.IsAuthenticated)
             {
-                return JwtManager.GenerateToken(user.username);
+               return JwtManager.GenerateToken(Thread.CurrentPrincipal.Identity.Name);
             }
-
-            throw new HttpResponseException(HttpStatusCode.Unauthorized);
+            else
+            {
+                throw new HttpResponseException(HttpStatusCode.Unauthorized);
+            }
         }
 
-        public bool CheckUser(string username, string password)
-        {
-            // should check in the database
-            return true;
-        }
     }
 }

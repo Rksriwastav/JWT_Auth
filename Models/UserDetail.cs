@@ -7,8 +7,8 @@ namespace Jwt_Auth.Models
 {
     public class UserDetail
     {
-        public string username { get; set; }
+        public string Username { get; set; }
 
-        public string password { get; set; }
+        public string Password { get; set; }
     }
 }
